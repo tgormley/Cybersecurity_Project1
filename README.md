@@ -34,33 +34,35 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| Web-1    | Server   | 10.1.0.7   | Linux            |
-| Web-2    | Server   | 10.1.0.8   | Linux            |
-| Elk-VM   | Kibana   | 10.2.0.4   | Linux            |
+| Jump Box | Gateway  | 10.0.0.1   | Linux (ubuntu 18.04)  |
+| Web-1    | Server   | 10.1.0.7   | Linux (ubuntu 18.04)  |
+| Web-2    | Server   | 10.1.0.8   | Linux (ubuntu 18.04)  |
+| Elk-VM   | Kibana   | 10.2.0.4   | Linux (ubuntu 18.04)  |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the jumpbox machine and Elk machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 
-Machines within the network can only be accessed by _____.
+home (personal) ip address
+
+Machines within the network can only be accessed by SSH.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
-
+The jumpbox is used to access the Elk VM, private IP: 10.1.0.4
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
-
+| Jump Box |    Yes              | home ip              |
+|  Elk-VM  |    Yes              | home ip              |
+|   Web-1  |     No              | 10.1.0.4             |
+|   Web-2  |     No              | 10.1.0.4             |
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because 
+it allows for predictable and consistent configurations. It also helps considerably with the representation of Infrastructure as Code (IAC). IAC involves provisioning and management of computing infrastructure and related configuration through machine-processable definition files.
+
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
@@ -69,7 +71,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+ <img width="675" alt="docker_ps" src="https://github.com/tgormley/Cybersecurity_Project1/blob/main/docker_ps_output.png?raw=true">
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -97,6 +99,6 @@ _TODO: Answer the following questions to fill in the blanks:_
 Sources:
 https://avinetworks.com/what-is-load-balancing/#:~:text=Load%20Balancing%20plays%20an%20important,to%20a%20public%20cloud%20provider.
 https://www.csoonline.com/article/2612700/security-jump-boxes-improve-security-if-you-set-them-up-right.html#:~:text=Jump%20boxes%20are%20normally%20centrally,are%20the%20more%20secure%20option.
-
+https://www.whizlabs.com/blog/ansible-advantages-and-disadvantages/#:~:text=Ansible%20automation%20helps%20considerably%20with,through%20machine%2Dprocessable%20definition%20files.
 
 
