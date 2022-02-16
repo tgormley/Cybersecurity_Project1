@@ -1,0 +1,38 @@
+Cybersecurity Elk stack project:
+
+2. 
+- In last 7 days, 231 unique visitors in India
+- In last 24 hours, 66 unique visitors in China using Mac OSX.
+- 503: 2.222%	404: 3.333%
+- In last 7 days, China produced the majority (20%) of the traffic on the website.
+- 10am had highest amount of activity.
+ 
+- css: cascading style sheet used to format contents of a webpage
+- deb: compressed linux software package used by Debian packages management system
+- gz: archive compressed using the gzip compression technology
+- rpm: compressed linux software package used by Red Hat Enterprise distributions
+- zip: common file format that's used to compress one or more files together into a single location
+
+3. 
+- Avg bypes: 10,735.667
+- Unique visitors: 3
+
+-What is potentially strange about this activity is that the number of unique visitors was very low compared to other timestamps.
+
+4. 
+- Timestamp: 2022-02-13 21:57:25
+- file type: rpm
+- country of origin: IN (India) 
+- HTTP response code: 200
+- OS: Windows 8
+5. _source file in attached picture
+
+6. According to the _source files from the timestamps , there doesn't appear to be any nefarious activity going on. 
+The only activities listed on the timestamps at or around the timestamp where the activity was first detected were made by 
+the virtual machines and filebeat updates. However, as seen in the picture (Kibana_Discover), the activity from the timestamp
+listed above does not appear in the list of the _source files. The fact that the avg bytes are higher compared to other activities
+and the country of origin and destination being India and China respectively is nonetheless suspicious. The high byte number could 
+be an indication that a user is exfiltrating data. 
+
+
+	
