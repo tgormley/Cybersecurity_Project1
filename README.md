@@ -30,11 +30,10 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - Metricbeat takes the metrics and statistics that it collects and ships them to the output that is specified, such as Elasticsearch or Logstash.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux (ubuntu 18.04)  |
+| Jump Box | Gateway  | 10.1.0.4   | Linux (ubuntu 18.04)  |
 | Web-1    | Server   | 10.1.0.7   | Linux (ubuntu 18.04)  |
 | Web-2    | Server   | 10.1.0.8   | Linux (ubuntu 18.04)  |
 | Elk-VM   | Kibana   | 10.2.0.4   | Linux (ubuntu 18.04)  |
@@ -58,6 +57,8 @@ A summary of the access policies in place can be found in the table below.
 |  Elk-VM  |    Yes              | home ip              |
 |   Web-1  |     No              | 10.1.0.4             |
 |   Web-2  |     No              | 10.1.0.4             |
+
+
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because 
