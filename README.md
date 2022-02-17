@@ -99,9 +99,12 @@ SSH into the control node and follow the steps below:
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
-        - /etc/ansible/file/filebeat-configuration.yml
+        - playbook: filebeat-playbook.yml
+        - /etc/ansible/filebeat-playbook.yml
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+        - edit the /etc/ansible/hosts file to add the webserver/elkserver ip addresses
 - _Which URL do you navigate to in order to check that the ELK server is running?
+        - http://[my.ELK-VM.External.IP]:5601/app/kibana
 
 Sources:
 https://avinetworks.com/what-is-load-balancing/#:~:text=Load%20Balancing%20plays%20an%20important,to%20a%20public%20cloud%20provider.
