@@ -65,9 +65,11 @@ it allows for predictable and consistent configurations. It also helps considera
 
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Install docker.io and python3-pip packages with the apt module
+- Install Docker Module with the pip module
+- Increase Virtual Memory: sysctl -w vm.max_map_count=262144
+- Use more memory with sysctl module
+- Download and launch a docker elk container (sebp/elk:761)
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
