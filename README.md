@@ -47,7 +47,6 @@ Only the jumpbox machine and Elk machine can accept connections from the Interne
 home (personal) ip address
 
 Machines within the network can only be accessed by SSH.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
 The jumpbox is used to access the Elk VM, private IP: 10.1.0.4
 A summary of the access policies in place can be found in the table below.
 
@@ -86,7 +85,6 @@ We have installed the following Beats on these machines:
 - Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 - Filebeat monitors log files and collects log events from the Web VMs and forwards them to the Elk VM.
 - Metricbeat collects metrics from the VMs such as CPU and memory usage, and reports it to the Elk VM
 
@@ -98,7 +96,7 @@ SSH into the control node and follow the steps below:
 - Update the configuration file to include the webservers and Elk VM.
 - Run the playbook, and navigate to the Elk VM to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
+
 - _Which file is the playbook? Where do you copy it?_
         - playbook: filebeat-playbook.yml
         - /etc/ansible/filebeat-playbook.yml
